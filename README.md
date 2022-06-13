@@ -1,15 +1,25 @@
-# power_management
+## Battery life is very important, but some Android phones try a little too hard to stretch it out. You may notice apps running poorly or missing notifications from being killed in the background.
 
-A power management plugin
+## This plugin purpose is stopping this killed.
 
-## Getting Started
+## How to use
+- Clone this repo to near your project's lib folder via -> git clone https://github.com/furkanansn/flutter_power_management_dont_kill_my_app_plugin.git
+- In pubspec.yaml folder, modify dependencies as below,
+  dependencies:
+  flutter:
+    sdk: flutter
+  power_management:
+    path: /<project path here>/power_management #for example : path: /Users/admin/Documents/Popular Tours/app/power_management
+  
+- Import this package -> import 'package:power_management/power_management.dart';
+- You can run it into initState as below,
+    @override
+  void initState() {
+    Future.delayed(Duration(seconds: 0), () async {
+      await PowerManagement.powerSaving;
+    });
+    super.initState();
+  }
+- Have fun!  
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
