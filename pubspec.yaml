@@ -1,0 +1,27 @@
+name: do_not_kill_my_app
+description: A power management plugin for do not kill my app
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.ansin.power_management.power_management
+        pluginClass: PowerManagementPlugin
+
+  

@@ -1,0 +1,45 @@
+group 'com.ansin.power_management.power_management'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        maven { url "https://maven.google.com" }
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        maven { url "https://maven.google.com" }
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+}
+dependencies {
+    implementation 'com.thelittlefireman:AppKillerManager:2.1.1'
+    implementation 'com.github.judemanutd:autostarter:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+
+}
